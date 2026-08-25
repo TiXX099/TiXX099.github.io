@@ -225,9 +225,12 @@
     font-size:12.5px; border-top:1px solid var(--border);
   }
 
-  [data-i18n="ar"]{ display:none; }
-  html[dir="rtl"] [data-i18n="en"]{ display:none; }
-  html[dir="rtl"] [data-i18n="ar"]{ display:revert; }
+  [data-i18n="ar"]{ display:none !important; }
+  html[dir="rtl"] [data-i18n="en"]{ display:none !important; }
+  html[dir="rtl"] [data-i18n="ar"]{ display:revert !important; }
+  html[dir="rtl"] ul[data-i18n="ar"],
+  html[dir="rtl"] .chips[data-i18n="ar"]{ display:flex !important; }
+  ul[data-i18n="en"], .chips[data-i18n="en"]{ display:flex !important; }
 
   .reveal{ opacity:0; transform:translateY(14px); transition:opacity .55s ease, transform .55s ease; }
   .reveal.in{ opacity:1; transform:none; }
